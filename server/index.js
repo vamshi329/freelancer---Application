@@ -15,28 +15,16 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-
-
-
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://freelancer-application-2xi6wd3k3-vamsis-projects-af515472.vercel.app?_vercel_share=tf7UyH3JDV4pJDymaXufmSPkhe07ddBm',
-];
-
+// ---------- CORS ----------
+// ---------- CORS (TEMP: allow all for debugging) ----------
 const corsOptions = {
-  origin(origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: true, // reflect request origin
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // handle preflight
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
