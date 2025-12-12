@@ -1,0 +1,14 @@
+{
+  "name": "prolancer-full-stack",
+  "version": "1.0.0",
+  "description": "Full-stack freelancing platform",
+  "main": "servers/server/index.js",
+  "scripts": {
+    "build": "cd clients/client && npm install && npm run build",
+    "start": "cd servers/server && npm install && node index.js",
+    "dev": "concurrently \"cd servers/server && npm run dev\" \"cd clients/client && npm start\""
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

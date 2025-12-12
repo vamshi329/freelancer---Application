@@ -1,0 +1,215 @@
+/* Modern Landing Page Styles */
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #2C3E50;
+  --accent-color: #E74C3C;
+  --text-color: #333333;
+  --light-bg: #F5F7FA;
+  --white: #FFFFFF;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.landing-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--light-bg) 0%, #E8F0FE 100%);
+}
+
+.landing-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.landing-nav h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.landing-nav button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.landing-nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.landing-hero-text {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.landing-hero-text h1 {
+  font-size: 3.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.landing-hero-text p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.landing-hero-text button {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.landing-hero-text button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .landing-hero-text p {
+    font-size: 1rem;
+  }
+  
+  .landing-nav {
+    padding: 1rem 0;
+  }
+}
+
+.landing-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto 0 auto;
+  max-width: 1000px;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.15);
+}
+
+.feature-card h4 {
+  margin: 1rem 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .landing-features {
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 90vw;
+  }
+  .feature-card {
+    width: 100%;
+  }
+}
+
+.landing-tagline {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.08);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.trusted-by {
+  margin: 3rem auto 1.5rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.trusted-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 0.7rem;
+}
+
+.trusted-logos img {
+  height: 38px;
+  width: auto;
+  filter: grayscale(1) brightness(0.8);
+  opacity: 0.8;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.trusted-logos img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.landing-footer {
+  margin-top: 3rem;
+  padding: 1.2rem 0 0.5rem 0;
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  border-top: 1px solid #e0e6ed;
+  background: transparent;
+}
+

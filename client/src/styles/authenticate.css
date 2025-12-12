@@ -1,0 +1,117 @@
+/* Modern Authentication Styles */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e3eafc 100%);
+  padding: 2rem;
+}
+
+.auth-box {
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(35,41,70,0.10);
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.auth-header h2 {
+  color: #232946;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.auth-header p {
+  color: #4a90e2;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #232946;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-group input, .form-group select {
+  padding: 0.9rem 1rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  transition: border-color 0.3s;
+  background: #f7fafd;
+}
+
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.auth-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 0.5rem;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(74,144,226,0.13);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 2rem;
+  color: #232946;
+  font-size: 1rem;
+}
+
+.auth-switch span {
+  color: #4a90e2;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-switch span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .auth-box {
+    padding: 1.5rem 0.7rem;
+  }
+  .auth-header h2 {
+    font-size: 1.5rem;
+  }
+}
