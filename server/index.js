@@ -42,10 +42,11 @@ const server = http.createServer(app);
 // ---------- Socket.IO ----------
 const io = new Server(server, {
   cors: {
-    origin: allowedOrigins,
+    origin: true, // allow any origin for now
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   },
 });
+
 
 io.on('connection', (socket) => {
   console.log('User connected');
