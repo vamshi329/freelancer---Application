@@ -15,10 +15,12 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-// ---------- CORS (main fix) ----------
+
+
+
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://freelancer-application.vercel.app', // Vercel frontend
+  'https://freelancer-application-git-main-vamsis-projects-af515472.vercel.app',
 ];
 
 const corsOptions = {
@@ -34,6 +36,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // handle preflight
+
 app.use(express.json());
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
