@@ -20,7 +20,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://freelancer-application-git-main-vamsis-projects-af515472.vercel.app',
+  'https://freelancer-application-2xi6wd3k3-vamsis-projects-af515472.vercel.app?_vercel_share=tf7UyH3JDV4pJDymaXufmSPkhe07ddBm',
 ];
 
 const corsOptions = {
